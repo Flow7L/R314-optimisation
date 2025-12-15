@@ -3,9 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Site vitrine</title>
+    <title>Site vitrine - Optimisé</title>
+    
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/script.js"></script>
+
+    <style>
+      .hero, .card, .feature, .cta {
+        box-shadow:
+          0 2px 4px rgba(0,0,0,.14),
+          0 8px 24px rgba(0,0,0,.22),
+          0 24px 60px rgba(0,0,0,.18);
+      }
+    </style>
+
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <div class="topbar">
@@ -34,22 +45,35 @@
         <h2>Galerie</h2>
         <div class="grid">
           <div class="card">
-            <a href="img1.html"><img src="img/img1.webp" alt="Image 1" /></a>
+            <a href="img1.html">
+              <img src="img/img1.webp" alt="Image 1" width="300" height="200" />
+            </a>
+          </div>
+          
+          <div class="card">
+            <a href="img2.html">
+              <img src="img/img2.webp" alt="Image 2" loading="lazy" width="300" height="200" />
+            </a>
           </div>
           <div class="card">
-            <a href="img2.html"><img src="img/img2.webp" alt="Image 2" /></a>
+            <a href="img3.html">
+              <img src="img/img3.webp" alt="Image 3" loading="lazy" width="300" height="200" />
+            </a>
           </div>
           <div class="card">
-            <a href="img3.html"><img src="img/img3.webp" alt="Image 3" /></a>
+            <a href="img4.html">
+              <img src="img/img4.webp" alt="Image 4" loading="lazy" width="300" height="200" />
+            </a>
           </div>
           <div class="card">
-            <a href="img4.html"><img src="img/img4.webp" alt="Image 4" /></a>
+            <a href="img5.html">
+              <img src="img/img5.webp" alt="Image 5" loading="lazy" width="300" height="200" />
+            </a>
           </div>
           <div class="card">
-            <a href="img5.html"><img src="img/img5.webp" alt="Image 5" /></a>
-          </div>
-          <div class="card">
-            <a href="img6.html"><img src="img/img6.webp" alt="Image 6" /></a>
+            <a href="img6.html">
+              <img src="img/img6.webp" alt="Image 6" loading="lazy" width="300" height="200" />
+            </a>
           </div>
         </div>
       </div>
