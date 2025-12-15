@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-      /* --- DÉBUT DU CSS --- */
       :root{--bg:#0f1226;--fg:#E8ECF1;--muted:#93A1B1;--primary:#7C5CFF;--accent:#06D6A0;--card:#15193A;--shadow:rgba(0,0,0,0.45)}
       *{box-sizing:border-box}
       html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial,sans-serif}
@@ -37,9 +36,8 @@
       /* Galerie & Cards */
       .gallery .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
       .card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px var(--shadow)}
-      /* Note : L'opacité 0 ici suppose que votre JS (script.js) ajoute la classe .loaded pour afficher l'image */
       .card img{display:block;width:100%;height:auto;opacity:0;transition:opacity .6s ease}
-      .card img.loaded{opacity:1}
+      .card img.loaded{opacity:1} /* Géré par script.js ou lazy loading natif */
       
       /* Features */
       .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -54,14 +52,13 @@
       @media (max-width:900px){.features-grid{grid-template-columns:repeat(2,1fr)}.gallery .grid{grid-template-columns:repeat(2,1fr)}}
       @media (max-width:560px){.features-grid{grid-template-columns:1fr}.gallery .grid{grid-template-columns:1fr}}
 
-      /* LE STYLE CRITIQUE DES OMBRES (anciennement extra.css) */
+      /* Style Critique (Ombres) */
       .hero, .card, .feature, .cta {
         box-shadow:
           0 2px 4px rgba(0,0,0,.14),
           0 8px 24px rgba(0,0,0,.22),
           0 24px 60px rgba(0,0,0,.18);
       }
-      /* --- FIN DU CSS --- */
     </style>
 
     <script src="js/script.js" defer></script>
@@ -92,26 +89,74 @@
       <div class="container">
         <h2>Galerie</h2>
         <div class="grid">
+          
           <div class="card">
             <a href="img1.html">
-              <img src="img/img1.webp" alt="Image 1" width="300" height="200" loading="lazy" />
+              <img 
+                src="img800/img1800.webp" 
+                srcset="img400/img1400.webp 400w, img800/img1800.webp 800w"
+                sizes="(max-width: 560px) 95vw, (max-width: 900px) 50vw, 33vw"
+                alt="Image 1" 
+                width="800" height="533" 
+              />
             </a>
           </div>
+          
           <div class="card">
-            <a href="img2.html"><img src="img/img2.webp" alt="Image 2" loading="lazy" width="300" height="200" /></a>
+            <a href="img2.html">
+              <img 
+                src="img800/img2800.webp"
+                srcset="img400/img2400.webp 400w, img800/img2800.webp 800w"
+                sizes="(max-width: 560px) 95vw, (max-width: 900px) 50vw, 33vw"
+                alt="Image 2" loading="lazy" width="800" height="533" 
+              />
+            </a>
           </div>
+
           <div class="card">
-            <a href="img3.html"><img src="img/img3.webp" alt="Image 3" loading="lazy" width="300" height="200" /></a>
+            <a href="img3.html">
+              <img 
+                src="img800/img3800.webp"
+                srcset="img400/img3400.webp 400w, img800/img3800.webp 800w"
+                sizes="(max-width: 560px) 95vw, (max-width: 900px) 50vw, 33vw"
+                alt="Image 3" loading="lazy" width="800" height="533" 
+              />
+            </a>
           </div>
+
           <div class="card">
-            <a href="img4.html"><img src="img/img4.webp" alt="Image 4" loading="lazy" width="300" height="200" /></a>
+            <a href="img4.html">
+              <img 
+                src="img800/img4800.webp"
+                srcset="img400/img4400.webp 400w, img800/img4800.webp 800w"
+                sizes="(max-width: 560px) 95vw, (max-width: 900px) 50vw, 33vw"
+                alt="Image 4" loading="lazy" width="800" height="533" 
+              />
+            </a>
           </div>
+
           <div class="card">
-            <a href="img5.html"><img src="img/img5.webp" alt="Image 5" loading="lazy" width="300" height="200" /></a>
+            <a href="img5.html">
+              <img 
+                src="img800/img5800.webp"
+                srcset="img400/img5400.webp 400w, img800/img5800.webp 800w"
+                sizes="(max-width: 560px) 95vw, (max-width: 900px) 50vw, 33vw"
+                alt="Image 5" loading="lazy" width="800" height="533" 
+              />
+            </a>
           </div>
+
           <div class="card">
-            <a href="img6.html"><img src="img/img6.webp" alt="Image 6" loading="lazy" width="300" height="200" /></a>
+            <a href="img6.html">
+              <img 
+                src="img800/img6800.webp"
+                srcset="img400/img6400.webp 400w, img800/img6800.webp 800w"
+                sizes="(max-width: 560px) 95vw, (max-width: 900px) 50vw, 33vw"
+                alt="Image 6" loading="lazy" width="800" height="533" 
+              />
+            </a>
           </div>
+
         </div>
       </div>
     </div>
